@@ -1,0 +1,196 @@
+.userMangement__mainWrapper {
+  height: 88dvh;
+  overflow-y: auto;
+  padding: 20px 25px;
+  h3 {
+    font-family: var(--mainFont);
+    color: var(--mainText-color);
+    font-size: 1.2dvw;
+    font-weight: 700;
+  }
+  .UM__topHeadingWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .UM__filterWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      .upload__BTN {
+        padding: 6px 20px;
+        border: 1px solid var(--activeTab-color);
+        outline: none;
+        border-radius: 50px;
+
+        font-family: var(--paraFont);
+        font-size: 0.95dvw;
+        font-weight: 400;
+        color: var(--primary-color);
+        background-color: var(--activeTab-color);
+
+        cursor: pointer;
+        transition: all 0.3s linear;
+
+        &:hover {
+          background-color: transparent;
+          color: var(--activeTab-color);
+        }
+      }
+    }
+  }
+
+  
+  .UM__reportMainWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 15px 0px;
+    .UM__reportCardMainWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+
+      .reportCard__iconWrapper {
+        height: 3dvw;
+        width: 3dvw;
+        border-radius: 50px;
+        padding: 10px;
+        flex-shrink: 1;
+        background-color: var(--paraText-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .reportCard__contentMainWrapper {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+
+        .contentBox {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          p {
+            font-size: 0.8dvw;
+            font-family: var(--paraFont);
+            color: var(--paraText-color);
+            font-weight: 400;
+          }
+          h3 {
+            font-family: var(--mainFont);
+            font-size: 1.5dvw;
+            font-weight: 700;
+            color: var(--mainText-color);
+          }
+        }
+        .report__percentWrapperr {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          .report__arrowWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50px;
+
+            height: 1.5dvw;
+            width: 1.5dvw;
+          }
+
+          .up {
+            background: var(--activeTab-color);
+          }
+          .fall {
+            background: var(--button-color3);
+            transform: rotate(90deg);
+          }
+          .report__span {
+            font-size: 0.8dvw;
+            font-family: var(--paraFont);
+            font-weight: 500;
+            color: var(--activeTab-color);
+          }
+        }
+      }
+    }
+  }
+
+  .UM__userListMainWrapper {
+    width: 100%;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+
+    .UM__listTopFilterWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .allUser__Btn {
+        background: var(--paraText-color);
+        color: var(--primary-color);
+        border: none;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-family: var(--paraFont);
+        font-weight: 500;
+        font-size: 0.9dvw;
+      }
+      .filterWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .inputWrapper{
+            padding: 5px;
+            background-color: #f0f0f0;
+            border-radius:10px;
+            input{
+                font-family: var(--mainFont);
+                font-size: 1dvw;
+                font-weight: 500;
+                padding: 5px 10px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+            }
+        }
+
+        button{
+            padding: 8px 14px;
+            border: none;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 50px;
+
+            background-color: var(--paraText-color);
+            color: var(--primary-color);
+
+            svg,svg path {
+                fill: var(--primary-color);
+            }
+        }
+      }
+    }
+
+    .UM__userTableWrapper{
+        width: 100%;
+        height: 55dvh;
+        margin: 20px 0px;
+    }
+  }
+}

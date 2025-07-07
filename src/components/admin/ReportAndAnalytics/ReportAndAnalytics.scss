@@ -1,0 +1,436 @@
+.RAAN__mainWrapper {
+  height: 88dvh;
+  overflow-y: auto;
+  padding: 20px 25px;
+
+  h3 {
+    font-family: var(--mainFont);
+    color: var(--mainText-color);
+    font-size: 1.2dvw;
+    font-weight: 700;
+  }
+
+  .RAAN__topHeadingWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .RAAN__filterWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      .upload__BTN {
+        padding: 6px 20px;
+        border: 1px solid var(--activeTab-color);
+        outline: none;
+        border-radius: 50px;
+
+        font-family: var(--paraFont);
+        font-size: 0.95dvw;
+        font-weight: 400;
+        color: var(--primary-color);
+        background-color: var(--activeTab-color);
+
+        cursor: pointer;
+        transition: all 0.3s linear;
+
+        &:hover {
+          background-color: transparent;
+          color: var(--activeTab-color);
+        }
+      }
+    }
+  }
+
+  .RAAN__reportMainWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 15px 0px;
+    .RAAN__reportCardMainWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+
+      .reportCard__iconWrapper {
+        height: 3dvw;
+        width: 3dvw;
+        border-radius: 50px;
+        padding: 10px;
+        flex-shrink: 1;
+        // background-color: var(--paraText-color);
+        background: linear-gradient(90deg, #76a13d 0%, #396400 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .reportCard__contentMainWrapper {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+
+        .contentBox {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          p {
+            font-size: 0.8dvw;
+            font-family: var(--paraFont);
+            color: var(--paraText-color);
+            font-weight: 400;
+          }
+          h3 {
+            font-family: var(--mainFont);
+            font-size: 1.5dvw;
+            font-weight: 700;
+            // color: var(--mainText-color);
+            background: var(
+              --Green-gradient,
+              linear-gradient(90deg, #76a13d 0%, #396400 100%)
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        .report__percentWrapperr {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          .report__arrowWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50px;
+
+            height: 1.5dvw;
+            width: 1.5dvw;
+          }
+
+          .up {
+            background: var(--activeTab-color);
+          }
+          .fall {
+            background: var(--button-color3);
+            transform: rotate(90deg);
+          }
+          .report__span {
+            font-size: 0.8dvw;
+            font-family: var(--paraFont);
+            font-weight: 500;
+            color: var(--activeTab-color);
+          }
+        }
+      }
+    }
+  }
+
+  .RAAN__graphMainWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 40dvh;
+
+    .RAAN__salesGraphMainWrapper {
+      background: var(--primary-color);
+      flex: 1;
+      height: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+
+      .salesGraph__topHeading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-family: var(--mainFont);
+          color: var(--paraText-color);
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        select {
+          border: none;
+          outline: none;
+          padding: 6px 10px;
+          background: var(--paraText-color);
+          color: var(--primary-color);
+          border-radius: 20px;
+          font-family: var(--paraFont);
+          font-weight: 400;
+          font-size: 0.9dvw;
+        }
+      }
+
+      .barGrapgh__mainWrapper {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .RAAN__weeklyVisitorMainWrapper {
+      background: var(--primary-color);
+      width: 40%;
+      height: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+
+      .weeklyVisitor__topMainWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-family: var(--mainFont);
+          color: var(--paraText-color);
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        button {
+          background: var(--paraText-color);
+          color: var(--primary-color);
+          padding: 4px 10px;
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          cursor: pointer;
+          font-family: var(--paraFont);
+          font-weight: 400;
+          font-size: 0.9rem;
+        }
+      }
+      .graphAndInfoWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        height: 90%;
+      }
+      .rightMainWrapper,
+      .leftMainWrapper {
+        flex: 1;
+
+        flex-shrink: 0;
+        height: 100%;
+        padding: 5px;
+      }
+    }
+
+    .rightMainWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-evenly;
+      align-items: start;
+      .weeksInfoWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      h4 {
+        font-family: var(--paraFont);
+        font-size: 0.9dvw;
+        font-weight: 600;
+        color: var(--paraText-color);
+      }
+
+      .infoWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        p {
+          font-family: var(--paraFont);
+          font-size: 0.9dvw;
+          font-weight: 600;
+        }
+        .paraOne {
+          color: var(--activeTab-color);
+        }
+        .paraTwo {
+          color: var(--button-color1);
+        }
+      }
+    }
+  }
+
+  .RAAN__topSellingAndRevenueGraphMainWrapper {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    gap: 10px;
+    margin: 10px 0px;
+
+    .RAAN__topSellingMainWrapper,
+    .RAAN__revenueMainWrapper {
+      flex: 1;
+      padding: 10px;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+    }
+
+    .RAAN__topSellingMainWrapper {
+      .topSelling__topMainWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-family: var(--mainFont);
+          color: var(--paraText-color);
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        button {
+          font-size: 0.9dvw;
+          border: none;
+          outline: none;
+          padding: 5px 10px;
+          border-radius: 20px;
+          background: var(--paraText-color);
+          color: var(--primary-color);
+          cursor: pointer;
+          font-family: var(--paraFont);
+          font-weight: 500;
+        }
+      }
+
+      .graphAndInfo__maiWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 10px;
+        margin: 10px 0px;
+
+        .graphInfo__wrapper,
+        .graph__wrapper {
+          flex: 1;
+          padding: 5px;
+        }
+
+        .graphInfo__wrapper {
+          display: flex;
+          flex-direction: column;
+
+          gap: 10px;
+          width: 100%;
+
+          .info__wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .info__rightWrapper {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 5px;
+
+              span {
+                border-radius: 50px;
+                height: 1dvw;
+                width: 1dvw;
+                background-color: var(--chart-color1);
+              }
+              .oils {
+                background: var(--button-color3) !important;
+              }
+              .sprays {
+                background: var(--button-color1) !important;
+              }
+              .others {
+                background: var(--activeTab-color) !important;
+              }
+
+              h5 {
+                font-family: var(--paraFont);
+                color: #595959;
+                font-size: 1dvw;
+                font-weight: 500;
+              }
+            }
+            p {
+              font-family: var(--paraFont);
+              color: #595959;
+              font-size: 1dvw;
+              font-weight: 600;
+            }
+          }
+          .total__mainWrapper {
+            margin: 20px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            h5 {
+              font-family: var(--mainFont);
+              color: black;
+              font-weight: 600;
+              font-size: 1.3dvw;
+            }
+            h4 {
+              font-family: var(--mainFont);
+              color: black;
+              font-weight: 600;
+              font-size: 1.1dvw;
+              span {
+                font-size: 1dvw;
+                font-weight: 500;
+                color: var(--paraText-color);
+              }
+            }
+          }
+        }
+
+        .graph__wrapper {
+          height: 30dvh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .RAAN__revenueMainWrapper {
+      .topSelling__topMainWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-family: var(--mainFont);
+          color: var(--paraText-color);
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+
+      .graph__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30dvh;
+        width: 100%;
+      }
+    }
+  }
+}

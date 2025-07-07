@@ -1,0 +1,260 @@
+.profile__mainWrapper {
+  height: 88dvh;
+  overflow-y: auto;
+  padding: 20px 25px;
+  h3 {
+    font-family: var(--mainFont);
+    color: var(--mainText-color);
+    font-size: 1.2dvw;
+    font-weight: 700;
+  }
+
+  .general__mainWrapper {
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    .general__headingWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        font-family: var(--mainFont);
+        color: var(--paraText-color);
+        font-weight: 600;
+        font-size: 1dvw;
+      }
+
+      button {
+        background: var(--paraText-color);
+        color: var(--primary-color);
+        padding: 8px 16px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        outline: none;
+
+        font-family: var(--paraFont);
+        font-size: 1dvw;
+        font-weight: 500;
+      }
+    }
+
+    .profileUpdate__mainWrapper {
+      margin: 20px 0px;
+      .changeProfilePic__wrapper {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 1px solid #d9d9d9;
+        padding: 25px 15px;
+
+        .profileImg__wrapper {
+          height: 8dvw;
+          width: 8dvw;
+          border-radius: 50px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .profileImgInfo__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          h4 {
+            font-family: var(--mainFont);
+            font-size: 1.2dvw;
+            font-weight: 600;
+            color: var(--paraText-color);
+          }
+          p {
+            font-family: var(--paraFont);
+            font-size: 1dvw;
+            font-weight: 400;
+            color: var(--paraText-color);
+          }
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background: var(--paraText-color);
+            color: var(--primary-color);
+            padding: 6px;
+            border: 1px solid var(--paraText-color);
+            color: var(--primary-color);
+            font-family: var(--paraFont);
+            font-size: 1dvw;
+            font-weight: 500;
+            border-radius: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .inputs__mainWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 20px 0px;
+        padding: 0px 10px;
+
+        .inputLabel__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          label {
+            font-family: var(--mainFont);
+            font-size: 1dvw;
+            font-weight: 600;
+            color: var(--paraText-color);
+          }
+          input {
+            padding: 10px 16px;
+            border: 1px solid var(--border-color);
+            outline: none;
+            border-radius: 25px;
+            background: #f0f0f0;
+
+            font-size: 1.1dvw;
+            font-family: var(--paraFont);
+          }
+        }
+      }
+    }
+  }
+
+  .changePassword__mainWrapper {
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    .general__headingWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        font-family: var(--mainFont);
+        color: var(--paraText-color);
+        font-weight: 600;
+        font-size: 1dvw;
+      }
+    }
+
+    .changePassword__inputWrapper{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 25px;
+        margin: 20px 0px;
+
+        .inputLabel__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 30%;
+  
+            label {
+              font-family: var(--mainFont);
+              font-size: 1dvw;
+              font-weight: 600;
+              color: var(--paraText-color);
+            }
+            input {
+              padding: 10px 16px;
+              border: 1px solid var(--border-color);
+              outline: none;
+              border-radius: 25px;
+              background: #f0f0f0;
+  
+              font-size: 1.1dvw;
+              font-family: var(--paraFont);
+            }
+          }
+
+          button{
+            background: var(--paraText-color);
+            color: var(--primary-color);
+            font-family: var(--paraFont);
+            font-size: 1dvw;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+          }
+    }
+  }
+
+
+  .paymentMethods__mainWrapper {
+    background: var(--primary-color);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0px;
+    h4 {
+      color: var(--paraText-color);
+      font-family: var(--mainFont);
+      font-weight: 600;
+      font-size: 1dvw;
+    }
+
+    .methord__cardWrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 20px 0px;
+
+      .cardWrapper {
+        padding: 10px;
+        border-radius: 50px;
+        border: 1px solid var(--border-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .cardIcon__wrapper {
+          height: 3dvw;
+          width: 3dvw;
+          border-radius: 50px;
+          background-color: #D21B1B;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+        }
+
+        .payPal {
+          background: #7F7F7F !important;
+        }
+        .wireLess {
+          background: var(--paraText-color) !important;
+        }
+        h5 {
+          font-family: var(--paraFont);
+          color: var(--paraText-color);
+          font-size: 1dvw;
+          font-weight: 700;
+        }
+
+        .cardContent__wrapper {
+          flex: 1;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,265 @@
+.PaymentPricing__mainWrapper {
+    height: 88dvh;
+    overflow-y: auto;
+    padding: 20px 25px;
+    h3 {
+      font-family: var(--mainFont);
+      color: var(--mainText-color);
+      font-size: 1.2dvw;
+      font-weight: 700;
+    }
+  
+    .TieredPricing__mainWrapper {
+      background: var(--primary-color);
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 20px 0px;
+  
+      .TP__topHeadingMainWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+          color: var(--paraText-color);
+          font-family: var(--mainFont);
+          font-weight: 600;
+          font-size: 1dvw;
+        }
+        button {
+          background: var(--paraText-color);
+          color: var(--primary-color);
+          padding: 5px 15px;
+          border-radius: 20px;
+          font-family: var(--paraFont);
+          font-size: 0.9dvw;
+          font-weight: 500;
+          cursor: pointer;
+          border: 1px solid var(--paraText-color);
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background: var(--primary-color);
+            color: var(--paraText-color);
+          }
+        }
+      }
+  
+      .productAndprice__inputMainWrapper {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        margin: 20px 0px;
+  
+        .inputLabel__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 30%;
+          label {
+            font-family: var(--mainFont);
+            font-size: 1dvw;
+            font-weight: 600;
+            color: var(--paraText-color);
+          }
+          input,
+          select {
+            padding: 10px 16px;
+            border: 1px solid var(--border-color);
+            outline: none;
+            border-radius: 25px;
+            background: #f0f0f0;
+  
+            font-size: 1.1dvw;
+            font-family: var(--paraFont);
+          }
+        }
+  
+        .saveBtn__wrapper {
+          button {
+            background: var(--paraText-color);
+            color: var(--primary-color);
+            font-family: var(--paraFont);
+            font-size: 1dvw;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid var(--paraText-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+  
+            &:hover {
+              background: var(--primary-color);
+              color: var(--paraText-color);
+            }
+          }
+        }
+      }
+  
+      .productPrice__tableMainWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+  
+        .tableOne__wrapper,
+        .tableTwo__wrapper {
+          flex: 1;
+          height: 40dvh;
+  
+          padding: 10px;
+        }
+      }
+    }
+    .paymentMethods__mainWrapper {
+      background: var(--primary-color);
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 20px 0px;
+      h4 {
+        color: var(--paraText-color);
+        font-family: var(--mainFont);
+        font-weight: 600;
+        font-size: 1dvw;
+      }
+  
+      .methord__cardWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 20px 0px;
+  
+        .cardWrapper {
+          padding: 10px;
+          border-radius: 50px;
+          border: 1px solid var(--border-color);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          .cardIcon__wrapper {
+            height: 3dvw;
+            width: 3dvw;
+            border-radius: 50px;
+            background-color: var(--activeTab-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+          }
+  
+          .payPal {
+            background: var(--button-color1) !important;
+          }
+          .wireLess {
+            background: var(--paraText-color) !important;
+          }
+          h5 {
+            font-family: var(--paraFont);
+            color: var(--paraText-color);
+            font-size: 1dvw;
+            font-weight: 700;
+          }
+  
+          .cardContent__wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+    }
+  
+    .discounts__mianWrapper {
+      background: var(--primary-color);
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 20px 0px;
+      h4 {
+        color: var(--paraText-color);
+        font-family: var(--mainFont);
+        font-weight: 600;
+        font-size: 1dvw;
+      }
+  
+      .inputLabel__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 40%;
+        margin: 20px 0px;
+  
+        label {
+          font-family: var(--mainFont);
+          font-size: 1dvw;
+          font-weight: 600;
+          color: var(--paraText-color);
+        }
+        input {
+          padding: 10px 16px;
+          border: 1px solid var(--border-color);
+          outline: none;
+          border-radius: 25px;
+          background: #f0f0f0;
+  
+          font-size: 1.1dvw;
+          font-family: var(--paraFont);
+        }
+      }
+      .textarea__wrapper {
+        width: 100%;
+        textarea {
+          width: 100%;
+          padding: 10px 16px;
+          border: 1px solid var(--border-color);
+          outline: none;
+          border-radius: 15px;
+          background: #f0f0f0;
+  
+          font-size: 1.1dvw;
+          font-family: var(--paraFont);
+        }
+      }
+  
+      button {
+        padding: 8px 20px;
+        border-radius: 20px;
+        border: 1px solid var(--button-color1);
+        background: var(--button-color1);
+        color: var(--primary-color);
+        font-family: var(--paraFont);
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 1dvw;
+        margin: 20px 0px;
+        transition: all 0.3s ease-in-out;
+  
+        &:hover {
+          background: var(--primary-color);
+          color: var(--button-color1);
+        }
+      }
+    }
+  
+    .TransactionHistory__mainWrapper {
+      background: var(--primary-color);
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 20px 0px;
+      h4 {
+        color: var(--paraText-color);
+        font-family: var(--mainFont);
+        font-weight: 600;
+        font-size: 1dvw;
+      }
+      .table__wrapper {
+          height: 60dvh;
+        margin: 20px 0px;
+      }
+    }
+  }
+  

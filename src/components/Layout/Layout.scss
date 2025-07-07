@@ -1,0 +1,273 @@
+.layout__mainWrapper {
+  height: 100dvh;
+  background-color: var(--primary-color);
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+
+  .layout__sideBarMainWrapper {
+    width: 20%;
+    flex-shrink: 0;
+    background-color: var(--sideMenu-color);
+    padding: 20px;
+
+    .sideMenu__Wrapper {
+      width: 100%;
+      height: 100%;
+
+      .sideMenu__logoWrapper {
+        width: 80%;
+        height: 4dvw;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .sideMenu__menuWrapper {
+        width: 100%;
+        margin-top: 2dvw;
+
+        // for "Main Menu" text..
+        .sideMenu__subHeading {
+          font-size: 1vw;
+          color: var(--paraText-color);
+          font-family: var(--paraFont), system-ui, -apple-system,
+            BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+            "Open Sans", "Helvetica Neue", sans-serif;
+          font-weight: 400;
+        }
+
+        .sideMenu__menuLinksWrapper {
+          width: 100%;
+          .menuWrapper {
+            width: 100%;
+            margin: 20px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .nav__links {
+              width: 100%;
+              display: flex;
+              justify-content: start;
+              align-items: center;
+              gap: 10px;
+
+              font-family: var(--mainFont);
+              list-style: none;
+              text-decoration: none;
+              font-weight: 400;
+              font-size: 1.1dvw;
+              background-color: transparent;
+              padding: 10px;
+              border-radius: 10px;
+              color: var(--paraText-color);
+              cursor: pointer;
+              transition: all 0.3s linear;
+              svg,
+              svg path {
+                transition: all 0.2s linear;
+              }
+
+              &:hover {
+                font-family: var(--mainFont);
+                list-style: none;
+                font-weight: 600;
+                font-size: 1.1dvw;
+                background-color: var(--activeTab-color);
+                padding: 10px;
+                border-radius: 10px;
+                color: var(--primary-color);
+
+                svg,
+                svg path {
+                  fill: var(--primary-color) !important;
+                }
+              }
+            }
+
+            .nav__linksActive {
+              font-family: var(--mainFont);
+              list-style: none;
+              font-weight: 600;
+              font-size: 1.1dvw;
+              background-color: var(--activeTab-color);
+              padding: 10px;
+              border-radius: 10px;
+              color: var(--primary-color);
+
+              svg {
+                fill: var(--primary-color) !important;
+              }
+            }
+          }
+          .menu__LogoutBtn {
+            font-family: var(--paraFont);
+            color: var(--primary-color);
+            width: 100%;
+            font-weight: 400;
+            font-size: 1.1dvw;
+            cursor: pointer;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+
+            background-color: var(--button-color3);
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+  .layout__mainContentViewMainWrapper {
+    flex: 1;
+
+    .top__navBarMainWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+
+      border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+
+      position: sticky;
+      width: 100%;
+
+      .topNavbar__leftWrapper {
+        h2 {
+          font-family: var(--mainFont);
+          font-weight: 700;
+          color: var(--mainText-color);
+          font-size: 1.5dvw;
+        }
+        p {
+          font-family: var(--paraFont);
+          font-size: 1dvw;
+          font-weight: 400;
+          color: var(--paraText-color);
+          margin: 1% 0%;
+        }
+      }
+
+      .topNavbar__searchMainWrapper {
+        width: 30%;
+        background-color: var(--sideMenu-color);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 12px;
+        border-radius: 50px;
+
+        .searchIcon__wrapper {
+          width: 2dvw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        input {
+          flex: 1;
+          border: none;
+          outline: none;
+          padding: 8px;
+          background-color: transparent;
+          font-size: 1dvw;
+          color: var(--paraText-color);
+          font-family: var(--paraFont);
+          font-weight: 400;
+        }
+      }
+
+      .topNavbar__rightWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        .topNavbar__notificationBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          border: 1px solid var(--border-color);
+          background-color: transparent;
+          padding: 8px;
+          border-radius: 50%;
+          outline: none;
+        }
+
+        .topNavbar__addUserBtn {
+          background-color: var(--activeTab-color);
+          color: var(--primary-color);
+          padding: 10px 25px;
+          border-radius: 20px;
+          border: none;
+          outline: none;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+
+          font-family: var(--mainFont);
+          font-size: 1dvw;
+          font-weight: 600;
+          cursor: pointer;
+
+          transition: all 0.3s linear;
+
+          &:hover {
+            background-color: var(--button-color1);
+          }
+        }
+
+        .topNavbar__porfileBtn {
+          border: 1px solid var(--border-color);
+          background-color: transparent;
+          padding: 8px 15px;
+          border-radius: 25px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+
+          .nameAndRole__Wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 2px;
+
+            h4 {
+              font-size: 0.9dvw;
+              font-weight: 600;
+              font-family: var(--paraFont);
+              color: var(--mainText-color);
+            }
+            p {
+              font-size: 0.8dvw;
+              font-weight: 400;
+              font-family: var(--mainFont);
+              color: var(--paraText-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

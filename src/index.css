@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --primary-color: #fff;
+  --sideMenu-color: #f0f0f0;
+  --mainText-color: #202020;
+  --paraText-color: #4d4d4d;
+  --button-color1: #f48b20;
+  --button-color2: #4d4d4d;
+  --button-color3: #e40101;
+  --chart-color1: #529aed;
+  --linear-gradient-color1: linear-gradient(90deg, #76a13d 0%, #396400 100%);
+  --activeTab-color: #76a13d;
+  --border-color: #d4d4d4;
+  --Negative-color: #dc2020;
+  --Positive-color: #80c02a;
+
+  --mainFont: "Montserrat";
+  --paraFont: "Lato";
+}
+
+.mainFont{
+  font-family: var(--mainFont);
+}
+.paraFont{
+  font-family: var(--paraFont);
+}

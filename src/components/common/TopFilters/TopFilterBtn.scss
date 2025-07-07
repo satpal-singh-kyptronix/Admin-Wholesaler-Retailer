@@ -1,0 +1,31 @@
+.sortingBtn__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  button {
+    padding: 6px 20px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+
+    font-family: var(--paraFont);
+    font-size: 0.95dvw;
+    font-weight: 400;
+    color: var(--paraText-color);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: var(--paraText-color);
+      color: var(--primary-color);
+    }
+  }
+
+  .active__sortBtn {
+    background-color: var(--paraText-color);
+    color: var(--primary-color);
+  }
+}
