@@ -26,3 +26,52 @@
 .paraFont{
   font-family: var(--paraFont);
 }
+/* Add this to your global CSS or at the top of your Commission.scss file */
+
+/* Reset any parent container that might be preventing scroll */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure the main app container allows scrolling */
+#root, .App, main, .main-content {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Fix for any fixed positioned parent containers */
+.dashboard-wrapper,
+.content-wrapper,
+.main-wrapper {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Specific fix for commission page wrapper */
+.commission-page-wrapper {
+  position: relative !important;
+  overflow-y: visible !important;
+  height: auto !important;
+  min-height: 100vh !important;
+}
+
+/* Ensure modals don't affect page scroll */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+  .commission-page-wrapper {
+    padding: 16px;
+    padding-bottom: 32px;
+  }
+  
+  .commission-history-card .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

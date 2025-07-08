@@ -1,424 +1,222 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Commission.scss";
 
-import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
-// Core CSS
-import { AgGridReact } from "ag-grid-react";
-import {
-  CreditCardIcon,
-  PaypalIcon,
-  WireLessIcon,
-} from "../../../assets/Svgs/AllSvgs";
-import { Switch } from "@mui/material";
-
-ModuleRegistry.registerModules([AllCommunityModule]);
-
-const rowSelection = {
-  mode: "multiRow",
-  headerCheckbox: false,
-};
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5555";
 
 export const CommissionPage = () => {
-    const [rowData, setRowData] = useState([
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-        {
-          Product: "Cobalt Bottle w/ Spray Top",
-          ID: "#05843",
-          Sell: "$1.80",
-        },
-      ]);
-      const [rowDate2, setRowData2] = useState([
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-        {
-          OrderID: "#05843",
-          Buyer: "Michael Carter",
-          Date: "1 April 2025",
-          Payment: "Paid",
-          Total: "$20",
-          Items: "2 Items",
-          Action: "View",
-        },
-      ]);
-    
-      // Column Definitions: Defines & controls grid columns.
-      const [colDefs, setColDefs] = useState([
-        { field: "Product" },
-        { field: "ID" },
-        { field: "Sell" },
-      ]);
-      const [colDefs2, setColDefs2] = useState([
-        {
-          field: "OrderID",
-        },
-        {
-          field: "Buyer",
-        },
-        {
-          field: "Date",
-        },
-        {
-          field: "Payment",
-        },
-        {
-          field: "Total",
-        },
-        {
-          field: "Items",
-        },
-        {
-          field: "Action",
-        },
-      ]);
-    
-      // Apply settings across all columns
-      const defaultColDef = useMemo(() => {
-        return {
-          filter: true,
-          editable: true,
-        };
-      }, []);
-    
-      const label = { inputProps: { "aria-label": "Switch demo" } };
+  const [users, setUsers] = useState([]);
+  const [filteredUsers, setFilteredUsers] = useState([]);
+  const [commissionValue, setCommissionValue] = useState("");
+  const [selectedUserId, setSelectedUserId] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [roleFilter, setRoleFilter] = useState("all");
+
+  const fetchUsers = async () => {
+    setLoading(true);
+    setError("");
+    setSuccess("");
+
+    try {
+      const response = await axios.get(`${API_BASE_URL}/api/auth/wholesalers-retailers`);
+      setUsers(response.data.users || []);
+      setFilteredUsers(response.data.users || []);
+      setSuccess("Fetched successfully!");
+    } catch (err) {
+      setError(err.response?.data?.message || err.message || "Fetch failed");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  useEffect(() => {
+    let filtered = users;
+
+    if (roleFilter !== "all") {
+      filtered = filtered.filter((user) => user.role.toLowerCase() === roleFilter);
+    }
+
+    if (searchQuery) {
+      filtered = filtered.filter(
+        (user) =>
+          user.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          user.email.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    setFilteredUsers(filtered);
+  }, [searchQuery, roleFilter, users]);
+
+  const handleSaveChanges = async () => {
+    if (!selectedUserId || !commissionValue) {
+      setError("Please select a user and enter a commission value.");
+      return;
+    }
+
+    try {
+      await axios.post(`${API_BASE_URL}/api/auth/commission`, {
+        userId: selectedUserId,
+        commission: commissionValue,
+      });
+
+      setSuccess("Commission updated successfully!");
+      setError("");
+      fetchUsers(); // Refresh
+    } catch (err) {
+      setError(err.response?.data?.message || err.message || "Failed to update commission");
+      setSuccess("");
+    }
+  };
+
   return (
     <div className="PaymentPricing__mainWrapper">
-      <h3>Commission</h3>
+      <h3>Commission Management</h3>
+
+      {loading && <p className="loading">Loading...</p>}
+      {error && <p className="error">{error}</p>}
+      {success && <p className="success">{success}</p>}
+
       <div className="TieredPricing__mainWrapper">
         <div className="TP__topHeadingMainWrapper">
           <h4>Set Commission</h4>
-          <button>See all Pricing</button>
+          <button onClick={() => console.log("Navigate to all pricing")}>
+            See all Pricing
+          </button>
         </div>
 
         <div className="productAndprice__inputMainWrapper">
           <div className="inputLabel__wrapper">
-            <label>Product Name</label>
-            <select>
-              <option>-- Select product --</option>
-              <option>Product 1</option>
-              <option>Product 2</option>
-              <option>Product 3</option>
-              <option>Product 4</option>
-              <option>Product 5</option>
+            <label>Filter by Role</label>
+            <select
+              value={roleFilter}
+              onChange={(e) => setRoleFilter(e.target.value)}
+            >
+              <option value="all">All Roles</option>
+              <option value="retailer">Retailer</option>
+              <option value="wholesaler">Wholesaler</option>
             </select>
           </div>
 
+          <div className="inputLabel__wrapper">
+            <label>Select User</label>
+            <select
+              value={selectedUserId}
+              onChange={(e) => setSelectedUserId(e.target.value)}
+            >
+              <option value="">-- Select user --</option>
+              {filteredUsers.some((user) => user.role.toLowerCase() === "wholesaler") && (
+                <optgroup label="Wholesalers">
+                  {filteredUsers
+                    .filter((user) => user.role.toLowerCase() === "wholesaler")
+                    .map((user) => (
+                      <option key={user._id} value={user._id}>
+                        {user.name} (Wholesaler)
+                      </option>
+                    ))}
+                </optgroup>
+              )}
+              {filteredUsers.some((user) => user.role.toLowerCase() === "retailer") && (
+                <optgroup label="Retailers">
+                  {filteredUsers
+                    .filter((user) => user.role.toLowerCase() === "retailer")
+                    .map((user) => (
+                      <option key={user._id} value={user._id}>
+                        {user.name} (Retailer)
+                      </option>
+                    ))}
+                </optgroup>
+              )}
+            </select>
+          </div>
 
           <div className="inputLabel__wrapper">
-            <label>Commission</label>
-            <input type="number" placeholder="$1" />
+            <label>Commission (%)</label>
+            <input
+              type="number"
+              placeholder="e.g. 10"
+              value={commissionValue}
+              onChange={(e) => setCommissionValue(e.target.value)}
+            />
           </div>
+
           <div className="saveBtn__wrapper">
-            <button>Save Changes</button>
+            <button onClick={handleSaveChanges}>Save Changes</button>
           </div>
         </div>
 
-        {/* <div className="productPrice__tableMainWrapper">
-          <div className="tableOne__wrapper">
-            <AgGridReact
-              rowData={rowData}
-              columnDefs={colDefs}
-              // loading={loading}
-              defaultColDef={defaultColDef}
-              pagination={true}
-              rowSelection={rowSelection}
-              onSelectionChanged={(event) => console.log("Row Selected!")}
-              onCellValueChanged={(event) =>
-                console.log(`New Cell Value: ${event.value}`)
-              }
-            />
-          </div>
-          <div className="tableTwo__wrapper">
-            <AgGridReact
-              rowData={rowData}
-              columnDefs={colDefs}
-              // loading={loading}
-              defaultColDef={defaultColDef}
-              pagination={true}
-              rowSelection={rowSelection}
-              onSelectionChanged={(event) => console.log("Row Selected!")}
-              onCellValueChanged={(event) =>
-                console.log(`New Cell Value: ${event.value}`)
-              }
-            />
-          </div>
-        </div> */}
+        {selectedUserId && (
+          <p className="selectedUserInfo">
+            Selected:{" "}
+            {users.find((u) => u._id === selectedUserId)?.name || "User not found"}
+          </p>
+        )}
       </div>
-
-      {/* <div className="paymentMethods__mainWrapper">
-        <h4>Payment Methods</h4>
-        <div className="methord__cardWrapper">
-          <div className="cardWrapper">
-            <div className="cardIcon__wrapper">
-              <CreditCardIcon />
-            </div>
-            <div className="cardContent__wrapper">
-              <h5>Enable/disable credit card</h5>
-              <Switch
-                {...label}
-                defaultChecked
-                className="toggleSwitch"
-                color="#76A13D"
-                style={{
-                  color: "#76A13D",
-                }}
-              />
-            </div>
-          </div>
-          <div className="cardWrapper">
-            <div className="cardIcon__wrapper payPal">
-              <PaypalIcon />
-            </div>
-            <div className="cardContent__wrapper">
-              <h5>Enable/disable Paypal</h5>
-              <Switch
-                {...label}
-                defaultChecked
-                className="toggleSwitch"
-                color="#F48B20"
-                style={{
-                  color: "#F48B20",
-                }}
-              />
-            </div>
-          </div>
-          <div className="cardWrapper">
-            <div className="cardIcon__wrapper wireLess">
-              <WireLessIcon />
-            </div>
-            <div className="cardContent__wrapper">
-              <h5>Enable/disable Wire Transfer</h5>
-              <Switch
-                {...label}
-                defaultChecked
-                className="toggleSwitch"
-                color="#4d4d4d"
-                style={{
-                  color: "#4d4d4d",
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="discounts__mianWrapper">
-        <h4>Discounts</h4>
-        <div className="inputLabel__wrapper">
-          <label>Create Coupon</label>
-          <input placeholder="-Enter Coupon Code-" />
-        </div>
-        <div className="textarea__wrapper">
-          <textarea rows={6} placeholder="Enter Coupon Terms"></textarea>
-        </div>
-
-        <button>Create Coupon</button>
-      </div> */}
 
       <div className="TransactionHistory__mainWrapper">
         <h4>Commission History</h4>
+        <div className="filterSearch__wrapper">
+          <div className="inputLabel__wrapper">
+            <label>Search by Name or Email</label>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+          <div className="inputLabel__wrapper">
+            <label>Filter by Role</label>
+            <select
+              value={roleFilter}
+              onChange={(e) => setRoleFilter(e.target.value)}
+            >
+              <option value="all">All Roles</option>
+              <option value="retailer">Retailer</option>
+              <option value="wholesaler">Wholesaler</option>
+            </select>
+          </div>
+        </div>
+
         <div className="table__wrapper">
-          <AgGridReact
-            rowData={rowDate2}
-            columnDefs={colDefs2}
-            // loading={loading}
-            defaultColDef={defaultColDef}
-            pagination={true}
-            rowSelection={rowSelection}
-            onSelectionChanged={(event) => console.log("Row Selected!")}
-            onCellValueChanged={(event) =>
-              console.log(`New Cell Value: ${event.value}`)
-            }
-          />
+          <table className="commission-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>Commission (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredUsers.length > 0 ? (
+                filteredUsers.map((user) => (
+                  <tr key={user._id}>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.phone}</td>
+                    <td>{user.role}</td>
+                    <td>{user.commission ?? "N/A"}</td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="5">No users found</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default CommissionPage;
